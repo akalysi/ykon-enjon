@@ -54,7 +54,13 @@ def parse(i, line):
                 data[bit] = not data[bit]
             # itan - verb, to put in
             elif cmd == "itan":
-                if input("") != "0":
+                u = input("")
+                
+                for k, v in mapping.pairs():
+                    if input == v:
+                        data = bitarray(k)
+                
+                if u != "0":
                     data[bit] = 1
                 else:
                     data[bit] = 0
